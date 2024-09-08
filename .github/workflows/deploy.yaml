@@ -26,7 +26,7 @@ jobs:
           HOST: ${{ secrets.HOST }}
           USER: ${{ secrets.USER }}
         run: |
-          ssh $USER@$HOST << EOF
+          ssh ${{ secrets.HOST }}@ ${{ secrets.USER }} << EOF
 
           echo "Deployment started"
 
