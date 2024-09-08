@@ -1,0 +1,38 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main  # Triggers on push to main branch
+      
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checkout the latest code
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      # Deploy to virtual machine if tests pass
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          
+      - name: Deploy to VM
+        env:
+          HOST: ${{ secrets.HOST }}
+          USER: ${{ secrets.USER }}
+        run: |
+          ssh $USER@$HOST << EOF
+
+          echo "Deployment started"
+
+          # cd /path/to/your/project
+          # git pull origin main
+
+          echo "Deployment completed"
+          EOF
+                    
