@@ -21,18 +21,20 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
           
-      - name: Deploy to VM
-        env:
-          HOST: ${{ secrets.HOST }}
-          USER: ${{ secrets.USER }}
-        run: |
-          ssh ${{ secrets.HOST }}@${{ secrets.USER }} << EOF
+      - name: Deploy commands
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            echo 'Deployment starting'
 
-          echo "Deployment started"
+            cd ${{ github.event.repository.name }}
+            git pull
+            docker compose down
+            docker compose up -d --build
 
-          # cd /path/to/your/project
-          # git pull origin main
-
-          echo "Deployment completed"
-          EOF
+            echo 'Deployment successful'
                     

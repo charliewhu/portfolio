@@ -6,7 +6,7 @@
 	const apps = [
 		{
 			name: 'Interex',
-			description: 'A fake futures exchange that matches user orders in a depth of market ladder',
+			description: 'A fake futures exchange that matches user orders on a depth of market ladder',
 			link: `${PUBLIC_BASE_URL}:5173`,
 			github: 'https://github.com/charliewhu/interex',
 		},
