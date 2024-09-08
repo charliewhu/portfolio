@@ -7,7 +7,7 @@
 		{
 			name: 'Interex',
 			description: 'A fake futures exchange that matches user orders on a depth of market ladder',
-			link: `${PUBLIC_BASE_URL}:5173`,
+			link: `${PUBLIC_BASE_URL}:1`,
 			github: 'https://github.com/charliewhu/interex',
 		},
 		{
@@ -19,7 +19,7 @@
 		{
 			name: 'Production Tracker',
 			description: 'A simple tracker for crude oil production',
-			link: `${PUBLIC_BASE_URL}`,
+			link: `${PUBLIC_BASE_URL}:2`,
 			github: 'https://github.com/charliewhu/stock_track',
 		},
 	]
