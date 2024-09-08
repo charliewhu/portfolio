@@ -7,7 +7,7 @@
 		{
 			name: 'Interex',
 			description: 'A fake futures exchange that matches user orders on a depth of market ladder',
-			link: `${PUBLIC_BASE_URL}:1`,
+			link: `${PUBLIC_BASE_URL}:3002`,
 			github: 'https://github.com/charliewhu/interex',
 		},
 		{
