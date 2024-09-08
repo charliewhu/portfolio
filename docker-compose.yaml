@@ -1,0 +1,18 @@
+services:
+  sveltekit:
+    restart: always
+    build: .
+    command: node --env-file=.env build
+    expose:
+      - 5173
+    volumes:
+      - ./src/:/app/src/
+    env_file:
+      - .env
+
+  nginx:
+    build: ./nginx
+    ports:
+    - '80:80'
+    depends_on:
+    - sveltekit
