@@ -25,24 +25,23 @@
 	]
 </script>
 
-<h1 class="mb-2 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-6xl">Charlie Avery</h1>
+<h1 class="mb-2 text-4xl font-extrabold tracking-tight lg:text-5xl">Charlie Avery</h1>
 
-<h2
-	class="mb-8 scroll-m-20 pb-2 text-3xl font-semibold tracking-tight text-muted-foreground transition-colors first:mt-0"
->
+<h2 class="mb-8 text-3xl font-semibold tracking-tight text-muted-foreground">
 	Software and Data Engineer
 </h2>
 
-<h3 class="mb-6 scroll-m-20 text-2xl font-semibold tracking-tight">My Projects:</h3>
+<h3 class="mb-4 text-2xl font-semibold tracking-tight">My Projects:</h3>
 
-<div class="grid gap-4 md:grid-cols-2">
+<div class="grid gap-4 sm:grid-cols-2">
 	{#each apps as app}
-		<Card.Root class="w-[350px]">
+		<Card.Root class="flex flex-col justify-between">
 			<Card.Header>
 				<Card.Title>{app.name}</Card.Title>
 				<Card.Description>{app.description}</Card.Description>
 			</Card.Header>
-			<Card.Content>
+			<!-- <Card.Content></Card.Content> -->
+			<Card.Footer>
 				<ul>
 					<li>
 						<a href={app.link} target="_blank" class="flex items-center gap-2">
@@ -57,8 +56,7 @@
 						</a>
 					</li>
 				</ul>
-			</Card.Content>
-			<!-- <Card.Footer class="flex justify-between"></Card.Footer> -->
+			</Card.Footer>
 		</Card.Root>
 	{/each}
 </div>
