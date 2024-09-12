@@ -13,12 +13,12 @@
 		{
 			name: 'Choptions',
 			description: 'An option pricer with profit/loss matrix',
-			link: 'https://choptions.streamlit.app',
+			link: `${PUBLIC_BASE_URL}:7001`,
 			github: 'https://github.com/charliewhu/choptions',
 		},
 		{
 			name: 'Production Tracker',
-			description: 'A simple tracker for crude oil production',
+			description: 'A simple tracker for monthly crude oil production',
 			link: `${PUBLIC_BASE_URL}:2`,
 			github: 'https://github.com/charliewhu/stock_track',
 		},
