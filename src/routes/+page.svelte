@@ -7,19 +7,19 @@
 		{
 			name: 'Interex',
 			description: 'A fake futures exchange that matches user orders on a depth of market ladder',
-			link: `${PUBLIC_BASE_URL}:3002`,
+			link: `http://interex.charlieavery.site`,
 			github: 'https://github.com/charliewhu/interex',
 		},
 		{
 			name: 'Choptions',
 			description: 'An option pricer with profit/loss matrix',
-			link: `${PUBLIC_BASE_URL}:7001`,
+			link: `http://choptions.charlieavery.site`,
 			github: 'https://github.com/charliewhu/choptions',
 		},
 		{
 			name: 'Production Tracker',
 			description: 'A simple tracker for monthly crude oil production',
-			link: `${PUBLIC_BASE_URL}:2`,
+			link: `http://prodtrack.charlieavery.site`,
 			github: 'https://github.com/charliewhu/stock_track',
 		},
 	]
