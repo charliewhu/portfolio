@@ -3,12 +3,13 @@ services:
     image: nginxproxy/nginx-proxy
     container_name: nginx-proxy
     ports:
-      - "80:80"
+      - 80:80
+      - 443:443
     volumes:
       # The vhost and conf volumes are only required
       # if you plan to obtain standalone certificates
-      # - vhost:/etc/nginx/vhost.d
       # - conf:/etc/nginx/conf.d
+      - vhost:/etc/nginx/vhost.d
       - html:/usr/share/nginx/html
       - certs:/etc/nginx/certs:ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
@@ -25,6 +26,7 @@ services:
     volumes_from:
       - nginx-proxy
     volumes:
+      - vhost:/etc/nginx/vhost.d
       - certs:/etc/nginx/certs:rw
       - acme:/etc/acme.sh
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -60,8 +62,8 @@ services:
       - web
 
 volumes:
-  # vhost:
   # conf:
+  vhost:
   html:
   certs:
   acme:
