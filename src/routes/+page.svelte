@@ -17,6 +17,12 @@
 			github: 'https://github.com/charliewhu/choptions',
 		},
 		{
+			name: 'Barrelytix',
+			description: 'A linear regression model for crude oil prices based on EIA fundamentals data',
+			link: `http://barrelytix.charlieavery.site`,
+			github: 'https://github.com/charliewhu/barrelytix',
+		},
+		{
 			name: 'Production Tracker',
 			description: 'A simple tracker for monthly crude oil production',
 			link: `http://prodtrack.charlieavery.site`,
